@@ -5,7 +5,7 @@ const generateTeam = team => {
     // create the manager html
     const generateManager = manager => {
         return `
-        <div>
+        <div class='card bg-info m-4' style="width: 27rem;">
             <div>
                 <h2>${manager.getName()}</h2>
                 <h3>
@@ -32,7 +32,7 @@ const generateTeam = team => {
     // create the html for engineers
     const generateEngineer = engineer => {
         return `
-        <div>
+        <div class='card bg-info m-4' style="width: 27rem;">
             <div>
                 <h2>${engineer.getName()}</h2>
                 <h3>
@@ -57,7 +57,7 @@ const generateTeam = team => {
     // create the html for interns
     const generateIntern = intern => {
         return `
-        <div>
+        <div class='card bg-info m-4' style="width: 27rem;">
     <div>
         <h2>${intern.getName()}</h2>
         <h3>
@@ -67,7 +67,7 @@ const generateTeam = team => {
     <div>
         <ul>
             <li>ID: ${intern.getId()}</li>
-            <li>${intern.getEmail()}</a></li>
+            Email: <a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a>
             <li>School: ${intern.getSchool()}</li>
         </ul>
     </div>
@@ -108,13 +108,20 @@ module.exports = team => {
         <title>My Team</title>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     </head>
     <body>
-        <header>
-            <h1>My Team</h1>
+        <header class='container-fluid'>
+            <div class='d-flex justify-content-center m-3 bg-danger'>
+                <h1>My Team</h1>
+            </div>
         </header>
         <main>
-            ${generateTeam(team)}
+            <div class='container-fluid'>
+                <div class='d-flex flex-wrap'>
+                    ${generateTeam(team)}
+                </div>
+            </div>
         </main>
     </body>
 </html>
