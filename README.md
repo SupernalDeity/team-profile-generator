@@ -20,7 +20,7 @@ Install requirer@8.2.4 and Jest by running ```npm install``` in the node termina
 [WalkThrough Video](https://drive.google.com/file/d/1tCZ2B3Yp-tfmhUNlTos2COBTFLECeCzM/view?usp=sharing)
 
 ## Links
-GitHub: GitHub: https://github.com/SupernalDeity/team-profile-generator
+GitHub: https://github.com/SupernalDeity/team-profile-generator
 
 ## Suppport
 Send support tickets to perezant121@gmail.com.
